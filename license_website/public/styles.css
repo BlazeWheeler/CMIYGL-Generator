@@ -1,0 +1,605 @@
+@import url("https://fonts.googleapis.com/css2?family=Niconne&family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+/* Load the custom fonts */
+@font-face {
+  font-family: 'ASSIGN';
+  src: url('/fonts/ASSIGN__.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'circhand';
+  src: url('/fonts/circhand.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Domestic_Manners';
+  src: url('/fonts/Domestic_Manners.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'FontForErin';
+  src: url('/fonts/FontForErin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'irrep';
+  src: url('/fonts/irrep.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'PizzaismyFAVORITE';
+  src: url('/fonts/PizzaismyFAVORITE.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'rans';
+  src: url('/fonts/rans.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'RockSaltRegular';
+  src: url('/fonts/RockSaltRegular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Scrawler';
+  src: url('/fonts/Scrawler.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Snake';
+  src: url('/fonts/Snake.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'UglyDaveAlternates';
+  src: url('/fonts/UglyDaveAlternates.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'VtksGarotaBonita';
+  src: url('/fonts/Vtks Garota Bonita.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Zeyada';
+  src: url('/fonts/Zeyada.ttf') format('truetype');
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 340px;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    background-color: #faefcf;
+    margin: 0;
+    color: #fff;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Glassmorphic Navbar */
+.navbar {
+    min-width: 340px;
+    width: 90%;
+    padding: 15px 20px;
+    background: rgba(0, 0, 0, 0.31);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto; /* Center the navbar with a margin at the top */
+}
+
+.bmc-button {
+    
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 1px 9px;
+    font-size: 16px;
+    font-family: 'cirhand', cursive;
+    letter-spacing: 0.6px;
+    
+    transition: 0.3s all linear;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-family: "Quicksand", sans-serif;
+    transition: all 0.3s ease;
+
+}
+
+.bmc-button img {
+    width: 27px;
+    margin-bottom: 1px;
+    vertical-align: middle;
+    box-shadow: none;
+    border: none;
+}
+
+.bmc-button:hover,
+.bmc-button:active,
+.bmc-button:focus {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+
+.navbar .logo a {
+  font-family: 'rans', cursive;
+  font-size: 28px;
+  color: #fff;
+  font-weight: bold; 
+  text-decoration: none;
+}
+
+/* Navbar Links */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.error-message {
+    color: #f00;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+
+/* Content */
+.content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+.star {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: transparent;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+
+.star1 {
+    background-color: #68c9d2;
+    top: 10%;
+    left: -50px;
+}
+
+.star2 {
+    background-color: #f8c0bf;
+    top: 20%;
+    left: 70%;
+}
+
+.star3 {
+    background-color: #c2e0ba;
+    top: 50%;
+    left: -100px;
+}
+
+.star4 {
+    background-color: #e2be5e;
+    top: 70%;
+    left: 60%;
+}
+
+.star5 {
+    background-color: #68c9d2;
+    top: 80%;
+    left: 30%;
+    transform: rotate(15deg);
+}
+
+
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.dropdown-button {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-family: Arial; /* Initial font */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0,0, 0.5);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(50px) ;
+    -webkit-backdrop-filter: blur(50px);
+    min-width: 100%;
+    z-index: 1;
+    max-height: 150px;
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+.dropdown-item {
+    padding: 8px;
+    cursor: pointer;
+    font-family: Arial;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(100, 100, 100, 0.3);
+}
+
+.dropdown-button:focus + .dropdown-content,
+.dropdown-content:hover {
+    display: block;
+}
+
+
+/* Main container for the entire form and output */
+.main-container {
+    min-width: 320px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px; /* Added margin to ensure space below the navbar */
+    flex-wrap: wrap;
+}
+
+/* Form and output container */
+.form-container, .output-container {
+    text-align: left;
+    width: 35%;
+    padding: 15px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.31);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+}
+
+/* Form heading */
+h1 {
+    font-family: "rans", cursive;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #fff;
+    font-size: 2.0rem;
+}
+
+
+/* Form labels and input styling */
+.controls label {
+    display: block;
+    margin: 10px 0;
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.controls input,
+select {
+    margin-left: 5px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    height: 35px;
+    width: 100%;
+    margin-top: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.controls input:focus,
+select:focus {
+    background-color: rgba(255, 255, 255, 0.4);
+    outline: none;
+}
+
+/* Profile Photo styling */
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    margin-bottom: 15px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.profile-photo img {
+    align-items: center;
+    justify-content: center;
+    display: none;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.profile-photo.has-image img {
+    display: block;
+}
+
+.profile-photo.error {
+    border: 2px dashed red;
+    color: red;
+}
+
+/* Output container for license */
+.output-container {
+    text-align: center;
+    width: 45%;
+    padding: 15px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.31);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+.output h2 {
+    font-family: "Quicksand", sans-serif;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.license-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    height: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-family: "Quicksand", sans-serif;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/*Share buttons **/
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.glass-button {
+    
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-family: "Quicksand", sans-serif;
+    transition: all 0.3s ease;
+}
+
+.glass-button:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+
+
+
+
+/* Color Picker styling */
+input[type="color"] {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    width: 35%;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: transparent;
+    padding: 0;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 20px;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+    border-radius: 20px;
+}
+
+/* Media Query for responsive layout */
+@media screen and (max-width: 768px) {
+
+
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .form-container,
+    .output-container {
+        width: 90%;
+        margin-left: 0;
+    }
+
+    .navbar {
+        width: 95%;
+        padding: 8px 15px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar ul li a {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+
+    .output-container {
+        width: 100%; /* Make the license display full width on smaller screens */
+    }
+}
+
+/* Responsive font size for the form heading */
+
+
+@media screen and (max-width: 1200px) {
+    h1 {
+        font-size: 1.5rem; /* Adjusted for smaller screens */
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    h1 {
+        font-size: 1.5rem; /* Further adjust for mobile phones */
+    }
+}
+
+@media screen and (max-width: 860px) {
+    h1 {
+        font-size: 1.4rem; /* Further adjust for mobile phones */
+    }
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 1.3 rem; /* Further adjust for mobile phones */
+    }
+}
+
+@media screen and (max-width: 570px) {
+    
+    .bmc-button {
+        border-radius: 10px;
+        padding: 1px 9px;
+        font-size: 10px;
+    }
+    .bmc-button img {
+        width: 20px;
+        margin-bottom: 1px;
+        vertical-align: middle;
+        box-shadow: none;
+        border: none;
+    }
+}
+@media screen and (max-width: 508px) {
+    
+    .bmc-button {
+        display: none;
+    }
+    .bmc-button img {
+        width: 15px;
+        margin-bottom: 1px;
+        vertical-align: middle;
+        box-shadow: none;
+        border: none;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2.0rem; /* Further adjust for mobile phones */
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    h1 {
+        font-size: 1.0rem; /* Further adjust for mobile phones */
+    }
+    .navbar ul li a {
+        display: none;
+    } 
+    
+}
+
+@media screen and (max-width: 920px) {
+    navbar {
+        width: 95%;
+        padding: 8px 15px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+
+    .navbar ul li a {
+        padding: 10px 30px;
+        font-size: 1.0rem;
+    } 
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Your License</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        /* Advertisement Styling */
+        #advertisement {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .adv {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .adv2 {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+        .adv li, .adv2 li {
+            list-style: none;
+            background: #ffffff;
+            border: 1px solid #ffffff;
+            box-shadow: 0px 0px 4px #444444;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .adv li {
+            width: 300px;
+            height: 250px;
+        }
+        .adv2 li {
+            width: 728px;
+            height: 90px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a id="navbarText" href="#">Call &nbsp; Me &nbsp; If &nbsp; You &nbsp; Get &nbsp; Lost</a>
+            
+        </div>
+        <a class="bmc-button" target="_blank" href="https://buymeacoffee.com/blazewheeler">
+            <img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee">
+            <span "" >Buy me a coffee</span>
+        </a>
+        
+    </nav>
+
+    <div class="content">
+        <div class="star star1"></div>
+        <div class="star star2"></div>
+        <div class="star star3"></div>
+        <div class="star star4"></div>
+        <div class="star star5"></div>
+    </div>
+
+    <div class="main-container">
+        <!-- Form Container -->
+        <div class="form-container">
+            <h1 id="inputCardText">Generate &nbsp; Your &nbsp; PassPort</h1>
+
+            <form action="/license/generate" method="POST" enctype="multipart/form-data" class="license-form" id="licenseForm">
+                <div class="controls">
+                    <label>Profile Image:</label>
+                    <div class="profile-photo" id="profilePhoto" onclick="triggerFileInput()">
+                        <img id="profilePreview" src="" alt="Profile Preview">
+                    </div>
+                    <input type="file" id="profileImage" name="profileImage" accept="image/*" style="display: none;">
+
+                    <label>Issued To:</label>
+                    <input type="text" id="issuedTo" name="issuedTo" placeholder="Name" class="btntext" maxlength="13" required>
+
+                    <label>Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" class="btnsize" required>
+
+                    <label>Place of Issue:</label>
+                    <input type="text" id="placeOfIssue" name="placeOfIssue" placeholder="Location" class="btntext" maxlength="13" required>
+
+                    <label>Date of Issue:</label>
+                    <input type="date" id="dateOfIssue" name="dateOfIssue" class="btnsize" required>
+                    
+                    <!-- Font Selection Dropdown -->
+                    <!-- Font Selection Dropdown -->
+                <div class="custom-dropdown">
+                    <label for="fontSelect">Select Signature Font:</label>
+                    <div class="dropdown">
+                        <button class="dropdown-button" type="button" id="fontDropdownButton">Select a font style</button>
+                        <div class="dropdown-content" id="fontDropdownContent">
+                            <div class="dropdown-item" data-font="RockSaltRegular" style="font-family: RockSaltRegular;">Tyler The Baconator</div>
+                            <div class="dropdown-item" data-font="rans" style="font-family: rans;">Playboi Carrot</div>
+                            <div class="dropdown-item" data-font="circhand" style="font-family: circhand; font-size: 30px;">Juice Swirl</div>
+                            <div class="dropdown-item" data-font="Domestic_Manners" style="font-family: Domestic_Manners;">A$AP Rocky Road </div>
+                            <div class="dropdown-item" data-font="FontForErin" style="font-family: FontForErin; font-size:25px;">Polo Gravy</div>
+                            <div class="dropdown-item" data-font="irrep" style="font-family: irrep; font-size:28px;">NLE Chompers </div>
+                            <div class="dropdown-item" data-font="PizzaismyFAVORITE" style="font-family: PizzaismyFAVORITE; font-size: 23px;">Lil Sushi Vert</div>
+                            <div class="dropdown-item" data-font="Scrawler" style="font-family: Scrawler; font-size: 30px;">Truffle Scott</div>
+                            <div class="dropdown-item" data-font="Snake" style="font-family: Snake; font-size:30px;">J. Coleslaw</div>
+                            <div class="dropdown-item" data-font="UglyDaveAlternates" style="font-family: UglyDaveAlternates; font-size: 25px;">Kanye Zest </div>
+                            <div class="dropdown-item" data-font="VtksGarotaBonita" style="font-family: VtksGarotaBonita; font-size: 30px;">Gunnapolitan</div>
+                            <div class="dropdown-item" data-font="Zeyada" style="font-family: Zeyada; font-size: 30px;">Saweetie Tea</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stamp Selection Dropdown -->
+                <label for="stampSelect">Select Stamp:</label>
+                <div class="custom-dropdown">
+                    <div class="dropdown">
+                        <button class="dropdown-button" type="button" id="stampDropdownButton">Select a stamp</button>
+                        <div class="dropdown-content" id="stampDropdownContent">
+                            <div class="dropdown-item" data-stamp="callMeIfYouGetLostStamp">Call me if you get lost</div>
+                            <div class="dropdown-item" data-stamp="neverHomeStamp">Around The World</div>
+                            <div class="dropdown-item" data-stamp="blondeStamp">Blonde</div>
+                            <div class="dropdown-item" data-stamp="ApolloStamp">Apollo</div>
+                            <div class="dropdown-item" data-stamp="PinkTapeStamp">Pink Tapes</div>
+                            <div class="dropdown-item" data-stamp="NasaStamp">Before there was</div>
+                            <div class="dropdown-item" data-stamp="DeceasedStamp">Deceased</div>
+                            <div class="dropdown-item" data-stamp="japanStamp">Japan</div>
+                            <div class="dropdown-item" data-stamp="spacemanStamp">Space man</div>
+                            <div class="dropdown-item" data-stamp="xoStamp">XOXOXO</div>
+                            <div class="dropdown-item" data-stamp="andromeda">Андромеда</div>
+                            <div class="dropdown-item" data-stamp="lsStamp.png">Los Angeles </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                    <input type="hidden" id="stampSelect" name="stampSelect" value="">
+
+                    <label>Signature:</label>
+                    <input type="text" id="signature" name="signature" placeholder="Signature" class="btntext" maxlength="12" required>
+
+                    <input type="hidden" id="fontSelect" name="fontSelect" value="Arial">
+
+                    <label>Background Color:</label>
+                    <input type="color" id="backgroundColor" name="backgroundColor" value="#faefcf" class="btnsize" required>
+                </div>
+
+                <div class="action-buttons">
+                    <button type="submit" id="generateButton">Generate License</button>
+                    <button type="button" id="updateFontButton">Update Font</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- License Display Container -->
+        <div class="output-container">
+            <h1 id="yourPassportID">Your &nbsp; PassPort</h1>
+
+            <!-- Advertisement Section -->
+            <div id="advertisement">
+                <ul class="adv">
+                    <li>300x250</li>
+                    <li>300x250</li>
+                </ul>
+                <ul class="adv2">
+                    <li>728x90</li>
+                </ul>
+            </div>
+
+            <div class="output">
+                <img src="" alt="Generated License Image" id="generatedImage" class="license-image">
+            </div>
+
+            <div class="action-buttons">
+                <button id="downloadButton" class="glass-button">Download PNG</button>
+                <button id="shareButton" class="glass-button">Share on X</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script to handle profile photo preview and input validation -->
+    <script src="/scripts.js"></script>
+</body>
+</html>
