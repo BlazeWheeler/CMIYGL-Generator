@@ -139,6 +139,51 @@ body {
 }
 
 
+.bmc-hidden-button-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  
+}
+
+.bmc-button-hidden {
+    
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 1px 9px;
+    font-size: 16px;
+    font-family: 'cirhand', cursive;
+    letter-spacing: 0.6px;
+    display: none;
+    transition: 0.3s all linear;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-family: "Quicksand", sans-serif;
+    transition: all 0.3s ease;
+
+}
+
+.bmc-button-hidden img {
+    width: 27px;
+    margin-bottom: 1px;
+    vertical-align: middle;
+    box-shadow: none;
+    border: none;
+    display: none;
+}
+
+.bmc-button-hidden:hover,
+.bmc-button-hidden:active,
+.bmc-button-hidden:focus {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+
 .navbar .logo a {
   font-family: 'rans', cursive;
   font-size: 28px;
@@ -274,7 +319,10 @@ body {
 .dropdown-content:hover {
     display: block;
 }
-
+ 
+.dropdown-content.visible {
+    display: block;
+}
 
 /* Main container for the entire form and output */
 .main-container {
@@ -291,7 +339,7 @@ body {
 /* Form and output container */
 .form-container, .output-container {
     text-align: left;
-    width: 35%;
+    width: 45%;
     padding: 15px;
     border-radius: 15px;
     background: rgba(0, 0, 0, 0.31);
@@ -488,7 +536,7 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 
     .form-container,
     .output-container {
-        width: 90%;
+        width: 100%;
         margin-left: 0;
     }
 
@@ -539,12 +587,48 @@ input[type="color"]::-webkit-color-swatch-wrapper {
     }
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 580px) {
+
+
+    .bmc-button-hidden {
     
+        display: flex;
+        
+        
+    
+    }
+    
+    .bmc-button-hidden img {
+       display: flex;
+    }
+
+    .profile-photo img {
+        align-items: center;
+        justify-content: center;
+        display: none;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .profile-photo.has-image img {
+        display: block;
+        width: 50%;
+    }
+
+
+    
+    .navbar .logo a {
+        font-family: 'rans', cursive;
+        font-size: 25px;
+        color: #fff;
+        font-weight: bold; 
+        text-decoration: none;
+      }
     .bmc-button {
         border-radius: 10px;
         padding: 1px 9px;
-        font-size: 10px;
+        font-size: 8px;
     }
     .bmc-button img {
         width: 20px;
@@ -553,8 +637,13 @@ input[type="color"]::-webkit-color-swatch-wrapper {
         box-shadow: none;
         border: none;
     }
+
+    
+
+
 }
 @media screen and (max-width: 508px) {
+    
     
     .bmc-button {
         display: none;
@@ -602,4 +691,11 @@ input[type="color"]::-webkit-color-swatch-wrapper {
         padding: 10px 30px;
         font-size: 1.0rem;
     } 
+}
+
+/* Safari specific adjustments if needed */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .dropdown-item {
+        font-size: 1.1em;
+    }
 }
