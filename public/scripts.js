@@ -140,6 +140,12 @@ document.addEventListener('DOMContentLoaded', function () {
         updateImage();
     }, 300)); 
 
+    // Open/close the font dropdown on button click
+    fontDropdownButton.addEventListener('click', function (event) {
+        event.stopPropagation(); // Prevent event from bubbling up
+        fontDropdownContent.classList.toggle('visible');
+    });
+
     // Event listener for font dropdown
     document.querySelectorAll('#fontDropdownContent .dropdown-item').forEach(item => {
         item.addEventListener('click', function () {
@@ -223,12 +229,20 @@ document.addEventListener('DOMContentLoaded', function () {
                     dropdownButton.style.fontSize = '16px'; // Default dropdown size
                     break;
             }
+            fontDropdownContent.classList.remove('visible'); // Close dropdown after selection
 
 
             updateImage();
              
         });
     });
+
+    // Toggle stamp dropdown on button click
+    stampDropdownButton.addEventListener('click', function (event) {
+        event.stopPropagation();
+        stampDropdownContent.classList.toggle('visible');
+    });
+
 
     //Event listener for stamp dropdown
     document.querySelectorAll('#stampDropdownContent .dropdown-item').forEach(item => {
@@ -239,9 +253,18 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('stampDropdownButton').innerText = selectedText;
             document.getElementById('stampSelect').value = selectedStamp;
 
-            // Optional: update the preview immediately
+
+            stampDropdownContent.classList.remove('visible'); // Close dropdown after selection
+
             updateImage();
         });
+    });
+    
+    // Close the stamp dropdown when clicking outside
+    document.addEventListener('click', function (event) {
+        if (!stampDropdownButton.contains(event.target) && !stampDropdownContent.contains(event.target)) {
+            stampDropdownContent.classList.remove('visible');
+        }
     });
 
 
