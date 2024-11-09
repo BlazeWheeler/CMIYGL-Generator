@@ -392,6 +392,12 @@ select:focus {
     outline: none;
 }
 
+
+
+.controls input::placeholder { 
+    color: #fff;
+}
+
 /* Profile Photo styling */
 .profile-photo {
     width: 120px;
@@ -406,13 +412,17 @@ select:focus {
     background-size: cover;
     background-position: center;
     border-radius: 10px;
+    padding: 3px; /* Add padding inside the container */
+    box-sizing: border-box; /* Ensure padding is included in width/height */
 }
 
 .profile-photo img {
     align-items: center;
     justify-content: center;
     display: none;
-    width: 100%;
+    max-width: 100%; /* Ensure image does not exceed container width */
+    max-height: 100%; /* Ensure image does not exceed container height */
+    object-fit: contain; /* Maintain image aspect ratio with padding */
     object-fit: cover;
     border-radius: 10px;
 }
@@ -495,7 +505,22 @@ button:hover {
     transform: scale(1.05);
 }
 
+input[type=date] {
+    justify-content: center;
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    color:#ffff;
+    
+    
+  }
 
+  input[type=date].js.no-value {
+    justify-content: center;
+    -webkit-text-fill-color: #fff;
+    font-size: 14px;
+    font-family: "Quicksand", sans-serif;
+    
+  }
 
 
 
@@ -593,8 +618,7 @@ input[type="color"]::-webkit-color-swatch-wrapper {
     .bmc-button-hidden {
     
         display: flex;
-        
-        
+           
     
     }
     
@@ -615,8 +639,6 @@ input[type="color"]::-webkit-color-swatch-wrapper {
         display: block;
         width: 50%;
     }
-
-
     
     .navbar .logo a {
         font-family: 'rans', cursive;
@@ -637,9 +659,6 @@ input[type="color"]::-webkit-color-swatch-wrapper {
         box-shadow: none;
         border: none;
     }
-
-    
-
 
 }
 @media screen and (max-width: 508px) {
@@ -698,4 +717,21 @@ input[type="color"]::-webkit-color-swatch-wrapper {
     .dropdown-item {
         font-size: 1.1em;
     }
+
+    input[type=date] {
+        justify-content: center;
+        font-family: "Quicksand", sans-serif;
+        font-size: 14px;
+        color:#ffff;  
+        
+      }
+    
+      input[type=date].js.no-value {
+        justify-content: center;
+        -webkit-text-fill-color: #fff;
+        font-size: 14px;
+        font-family: "Quicksand", sans-serif;
+        
+      }
+    
 }

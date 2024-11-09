@@ -13,6 +13,23 @@ function applyColorPattern(element, colors) {
     element.innerHTML = coloredText; // Update the element with colored text
 }
 
+// Safari Styling for Date input box
+// Select all input elements of type 'date'
+const dateInputs = document.querySelectorAll('input[type="date"]');
+// Create a helper function
+const toggleClass = (input) => input.classList.toggle('no-value', !input.value);
+// Loop over the inputs
+dateInputs.forEach(input => {
+  // Add a js class as our colour hook
+  input.classList.add('js');
+  // Add an onchange listener
+  input.addEventListener('change', (event) => toggleClass(event.target));
+  // Toggle
+  toggleClass(input);
+});
+
+
+
 // Define the color pattern
 const colors = ['#68c9d2', '#f8c0bf', '#c2e0ba', '#e2be5e', '#68c9d2'];
 
