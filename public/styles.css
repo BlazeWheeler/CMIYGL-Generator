@@ -139,41 +139,36 @@ body {
 }
 
 
-.bmc-hidden-button-container {
+.bmc-container {
     display: flex;
     justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-  
+    width: 100%; /* Ensures it spans the full width */
 }
 
 .bmc-button-hidden {
-    
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    visibility: hidden;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     border-radius: 20px;
     padding: 1px 9px;
     font-size: 16px;
     font-family: 'cirhand', cursive;
     letter-spacing: 0.6px;
-    display: none;
     transition: 0.3s all linear;
     border: 1px solid rgba(255, 255, 255, 0.3);
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.31);
     color: #fff;
     font-family: "Quicksand", sans-serif;
-    transition: all 0.3s ease;
-
 }
 
 .bmc-button-hidden img {
     width: 27px;
     margin-bottom: 1px;
     vertical-align: middle;
-    box-shadow: none;
-    border: none;
-    display: none;
 }
 
 .bmc-button-hidden:hover,
@@ -617,13 +612,11 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 
     .bmc-button-hidden {
     
-        display: flex;
-           
-    
+        visibility: visible
     }
     
     .bmc-button-hidden img {
-       display: flex;
+       visibility: visible;
     }
 
     .profile-photo img {
@@ -648,33 +641,14 @@ input[type="color"]::-webkit-color-swatch-wrapper {
         text-decoration: none;
       }
     .bmc-button {
-        border-radius: 10px;
-        padding: 1px 9px;
-        font-size: 8px;
-    }
-    .bmc-button img {
-        width: 20px;
-        margin-bottom: 1px;
-        vertical-align: middle;
-        box-shadow: none;
-        border: none;
-    }
-
-}
-@media screen and (max-width: 508px) {
-    
-    
-    .bmc-button {
         display: none;
     }
     .bmc-button img {
-        width: 15px;
-        margin-bottom: 1px;
-        vertical-align: middle;
-        box-shadow: none;
-        border: none;
+        display: none;
     }
+
 }
+
 
 
 @media screen and (max-width: 768px) {
