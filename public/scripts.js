@@ -37,9 +37,13 @@ const colors = ['#68c9d2', '#f8c0bf', '#c2e0ba', '#e2be5e', '#68c9d2'];
 const navbarText = document.getElementById('navbarText');
 const inputCardText = document.getElementById('inputCardText');
 const yourPassportCardText = document.getElementById('yourPassportID');
+
+
+
 applyColorPattern(navbarText, colors);
 applyColorPattern(inputCardText, colors);
 applyColorPattern(yourPassportCardText, colors);
+
 
 // Function to trigger file input click
 function triggerFileInput() {
