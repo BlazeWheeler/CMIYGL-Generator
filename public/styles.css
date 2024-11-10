@@ -643,8 +643,6 @@ input[type="color"]::-webkit-color-swatch-wrapper {
     justify-content: center;
     align-items: center;
   }
-  
-  
 
 /* Media Query for responsive layout */
 @media screen and (max-width: 768px) {
@@ -682,8 +680,10 @@ input[type="color"]::-webkit-color-swatch-wrapper {
     }
 }
 
-/* Responsive font size for the form heading */
 
+
+
+/* Responsive font size for the form heading */
 
 @media screen and (max-width: 1200px) {
     h1 {
@@ -768,11 +768,8 @@ input[type="color"]::-webkit-color-swatch-wrapper {
         justify-content: right;
        
       }
-    
 
 }
-
-
 
 @media screen and (max-width: 768px) {
     h1 {
