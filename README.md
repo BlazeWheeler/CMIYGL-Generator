@@ -49,3 +49,42 @@ If you want to run this project locally:
 ```bash
 git clone https://github.com/BlazeWheeler/CMIYGL-Generator.git
 cd CMIYGL-Generator
+## 📸 Screenshots  
+![CMIYGL Generator Preview](https://your-image-url.com/preview.png)  
+
+*Recreating the iconic CMIYGL ID look.*
+
+---
+
+## 📌 Roadmap  
+✅ **Recreate the original CMIYGL generator experience**  
+✅ **Enable custom images & backgrounds**  
+🚧 **Improve mobile responsiveness**  
+🚧 **Add more customization options**  
+
+---
+
+## 🤝 Contributing  
+Feel free to **submit issues, suggest features, or fork this project** if you’d like to improve it.  
+
+---
+
+## 📝 License  
+This project is licensed under the **MIT License**. See [LICENSE](./LICENSE) for details.  
+
+---
+
+## 🎯 Support & Follow  
+⭐ **If you love Tyler & this project, give it a star!**  
+
+📌 **Live at:** [callmeifyougetlost.online](https://callmeifyougetlost.online/)  
+
+🎟 *Bon voyage.*  
+
+
+<!-- CONTACT -->
+## Contact
+
+Blaze Wheeler - [@blazew] - blaze@blazew.me
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
