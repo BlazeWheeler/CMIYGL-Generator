@@ -9,6 +9,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+
+  // Add the "engines" section here
+  "engines": {
+    "node": "18.x"
+  },
+
   "dependencies": {
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
