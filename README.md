@@ -46,11 +46,21 @@ That’s it. **Welcome to the world of Sir Baudelaire.**
 If you want to run this project locally:  
 
 ### **1️⃣ Clone the repository:**  
-```bash
-git clone https://github.com/BlazeWheeler/CMIYGL-Generator.git
+```git clone https://github.com/BlazeWheeler/CMIYGL-Generator.git
 cd CMIYGL-Generator
+node app.js
+```
 ## 📸 Screenshots  
-![CMIYGL Generator Preview](https://your-image-url.com/preview.png)  
+## 📸 Screenshots  
+
+### 🔹 Preview 1  
+![CMIYGL Generator Preview 1](previews/preview_1.png)  
+
+### 🔹 Preview 2  
+![CMIYGL Generator Preview 2](previews/preview_2.png)  
+
+*Recreating the iconic CMIYGL ID look.*
+
 
 *Recreating the iconic CMIYGL ID look.*
 
