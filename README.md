@@ -26,7 +26,9 @@ So, instead of letting the idea disappear, this project **revives the experience
 - 🎟 **Create your own CMIYGL-style ID**  
 - 🖼 **Upload a custom profile picture**  
 - 🎨 **Choose your own background color**  
-- ✍️ **Edit personal details (Name, DOB, etc.)**  
+- ✍️ **Edit personal details (Name, DOB, etc.)**
+- 🖊️ **Multiple Signature Fonts Available.**
+- 💌 **Multiple Custom Made CMIYGL Stamps**
 - 🔍 **Live Preview before downloading**  
 - 🌐 **100% Web-Based – No installation needed**  
 
@@ -50,7 +52,7 @@ If you want to run this project locally:
 cd CMIYGL-Generator
 node app.js
 ```
-## 📸 Screenshots  
+
 ## 📸 Screenshots  
 
 ### 🔹 Preview 1  
@@ -60,17 +62,6 @@ node app.js
 ![CMIYGL Generator Preview 2](previews/preview_2.png)  
 
 *Recreating the iconic CMIYGL ID look.*
-
-
-*Recreating the iconic CMIYGL ID look.*
-
----
-
-## 📌 Roadmap  
-✅ **Recreate the original CMIYGL generator experience**  
-✅ **Enable custom images & backgrounds**  
-🚧 **Improve mobile responsiveness**  
-🚧 **Add more customization options**  
 
 ---
 
@@ -90,7 +81,6 @@ This project is licensed under the **MIT License**. See [LICENSE](./LICENSE) for
 📌 **Live at:** [callmeifyougetlost.online](https://callmeifyougetlost.online/)  
 
 🎟 *Bon voyage.*  
-
 
 <!-- CONTACT -->
 ## Contact
